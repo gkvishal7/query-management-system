@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'admin_end',
-    'user_end',
+    # 'admin_end',
+    # 'user_end',
+    'home',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +59,7 @@ ROOT_URLCONF = 'query_management_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'query_management_system/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,15 +77,26 @@ WSGI_APPLICATION = 'query_management_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-DATABASES = {
-    'default': {
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'query-management-system',
+#         'USER':'vishwa',
+#         'PASSWORD':'1234',
+#         'HOST':'localhost'
+#     }
+# }
+
+DATABASES={
+    'default':{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'query-management-system',
-        'USER':'vishwa',
-        'PASSWORD':'1234',
+        'USER':'postgres',
+        'PASSWORD':'001',
         'HOST':'localhost'
     }
 }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -127,6 +141,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT=os.path.join(BASE_DIR,'assests')
+STSTATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'/static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
