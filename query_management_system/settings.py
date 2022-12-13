@@ -81,7 +81,15 @@ DATABASES = {
         'HOST':'localhost'
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'yrqicjje',
+#         'USER':'yrqicjje',
+#         'PASSWORD':'2H56PHHibpnBUaDmH9l0bL1ltc7uDWiq',
+#         'HOST':'rosie.db.elephantsql.com'
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
