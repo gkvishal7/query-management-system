@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'admin_end',
+    'user_end',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@mail.querymanagementsystem.software'
+EMAIL_HOST_PASSWORD = '85163dd9bfd351666b56f9e175943ed2-48d7d97c-1422265f'
+EMAIL_USE_TLS = True
