@@ -1,0 +1,22 @@
+body,html{
+  
+    background-image: url("street.avif");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  
+}
+.navbar-nav{
+    margin-top: 50px;
+    margin-left: 750px;
+}
+nav{
+    color:aqua
+}
+.navbar
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
