@@ -3,21 +3,18 @@ from django.contrib.auth .models import auth
 from django.contrib import messages
 from .models import user
 
-
+#Default Page when visiting
 def home(request):
     return render(request,'accounts/home.html')
-
+#Login Method
 def login(request):
-    print('hello')
     if(request.method=="POST"):
         email=request.POST['emailid']
         passwd=request.POST['password']
-        print("Email : ",email)
         user=auth.authenticate(request,email=email,password=passwd)
         if(user is not None):
             auth.login(request,user)
             print("Success")
-            print("user login successfully")
             return redirect("/querysubmit/")
         else:
             print("Failed")
@@ -26,6 +23,7 @@ def login(request):
     else:
         return render(request,'accounts/login.html')
 
+#Register Method
 def register(request):
     if(request.method=="POST"):
         name=request.POST['name1']
