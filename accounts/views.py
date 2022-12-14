@@ -3,6 +3,8 @@ from django.contrib.auth .models import User,auth
 from django.contrib import messages
 
 
+def home(request):
+    return render(request,'accounts/home.html')
 
 def login(request):
     if(request.method=="POST"):
