@@ -6,6 +6,7 @@ from .models import user
 #Default Page when visiting
 def home(request):
     return render(request,'accounts/home.html')
+
 #Login Method
 def login(request):
     if(request.method=="POST"):

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'admin_end',
+    'admin_end',
      'user_end',
     'accounts',
 ]
@@ -76,25 +76,25 @@ WSGI_APPLICATION = 'query_management_system.wsgi.application'
 
 # Database
 #https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'query-management-system',
-        'USER':'vishwa',
-        'PASSWORD':'1234',
-        'HOST':'localhost'
-    }
-}
-
-# DATABASES={
-#     'default':{
+# DATABASES = {
+#     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'query-management-system',
-#         'USER':'postgres',
-#         'PASSWORD':'001',
+#         'USER':'vishwa',
+#         'PASSWORD':'1234',
 #         'HOST':'localhost'
 #     }
 # }
+
+DATABASES={
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'query-management-system',
+        'USER':'postgres',
+        'PASSWORD':'001',
+        'HOST':'localhost'
+    }
+}
 
 # DATABASES = {
 #     'default': {
@@ -147,7 +147,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'assests')
 STSTATICFILES_DIRS = [
     os.path.join(BASE_DIR,'/static')
 ]
-
+print(BASE_DIR)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
