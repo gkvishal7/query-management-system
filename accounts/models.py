@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin  
 from django.contrib.auth.base_user import BaseUserManager  
 from django.utils import timezone
-import datetime
 from django.contrib.auth.base_user import BaseUserManager  
- 
+from django.utils.translation import gettext as _
+
 #Custom Model Manager 
 class userManager(BaseUserManager):   
     def create_user(self,username, email, password, **extra_fields):  
