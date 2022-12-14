@@ -10,7 +10,7 @@ def home(request):
 def login(request):
     print('hello')
     if(request.method=="POST"):
-        email=request.POST['username']
+        email=request.POST['emailid']
         passwd=request.POST['password']
         print("Email : ",email)
         user=auth.authenticate(request,email=email,password=passwd)
