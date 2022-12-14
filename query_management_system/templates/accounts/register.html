@@ -27,10 +27,6 @@
         {% endfor %}
       </div>
 
-
-
-
-
       <div class="form-container">
         
         <div class="form-inner">
@@ -45,46 +41,6 @@
                 type="text"
                 name="email_ID"
                 placeholder="Email Address"
-                required
-              />
-            </div>
-            <div class="field">
-              <input
-                type="text"
-                name="street_name"
-                placeholder="Street Name"
-                required
-              />
-            </div>
-            <div class="field">
-              <input
-                type="text"
-                name="area_name"
-                placeholder="Area Name"
-                required
-              />
-            </div>
-            <div class="field">
-              <input
-                type="text"
-                name="city"
-                placeholder="City"
-                required
-              />
-            </div>
-            <div class="field">
-              <input
-                type="text"
-                name="state"
-                placeholder="State"
-                required
-              />
-            </div>
-            <div class="field">
-              <input
-                type="text"
-                name="pincode"
-                placeholder="Pincode"
                 required
               />
             </div>
@@ -109,18 +65,13 @@
               <input type="submit" value="Signup" />
             </div>
           </form>
-          
-          
-          
         </div>
             <div>
             {% for message in messages %}
-
             <div class="alert alert-danger">
               <a class="close" href="#" data-dismiss="alert">×</a>
               {{ message }}
             </div>
-
             {% endfor %}
           </div>
       </div>
