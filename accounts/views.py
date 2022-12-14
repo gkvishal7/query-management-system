@@ -10,7 +10,7 @@ def home(request):
 def login(request):
     print('hello')
     if(request.method=="POST"):
-        email=request.POST['emailid']
+        email=request.POST['username']
         passwd=request.POST['password']
         print("Email : ",email)
         user=auth.authenticate(request,email=email,password=passwd)
@@ -43,8 +43,9 @@ def register(request):
             else :
                  userobj=user.objects.create_user(username=name,email=email,password=passwd)
                  userobj.save()
+                 return redirect("/login")
         else:
             messages.error(request,"Password Not Matching")
             return redirect("register")
-
-    return render(request,'accounts/register.html')
+    else:
+        return render(request,'accounts/register.html')
