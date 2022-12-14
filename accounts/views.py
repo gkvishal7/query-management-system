@@ -18,7 +18,7 @@ def login(request):
             auth.login(request,user)
             print("Success")
             print("user login successfully")
-            return redirect("/")
+            return redirect("/querysubmit/")
         else:
             print("Failed")
             messages.error(request,"Invalid Credentials")
