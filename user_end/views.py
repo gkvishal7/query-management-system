@@ -23,4 +23,4 @@ def user_view(request):
         query_object=query(query_info=query_data,query_date=query_date,query_time=query_time,user_details=request.user)
         query_object.save()
     #send_mail('subject', 'body of the message', 'noreply@bottlenose.co', ['vishwanathnaryanan29@gmail.com'])
-    return render(request,"user_end/user_end.html")
+    return render(request,"user_end/user.html")
