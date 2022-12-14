@@ -17,19 +17,12 @@
 
       <div>
         {% for message in messages %}
-
         <div class="alert alert-danger error-message">
           <a class="close" href="#" data-dismiss="alert">×</a>
           {{ message }}
         </div>
-
         {% endfor %}
       </div>
-
-
-
-
-
       <div class="form-container">
         <!-- <div class="slide-controls">
           <input type="radio" name="slide" id="login" checked />
@@ -42,7 +35,7 @@
           <form action="/login/" class="login" method="post">
             {% csrf_token %}
             <div class="field">
-              <input type="text" placeholder="User Name" name="username" required />
+              <input type="text" placeholder="E-Mail" name="emailid" required />
             </div>
             <div class="field">
               <input type="password" placeholder="Password" name="password" required />
@@ -55,48 +48,7 @@
             <div class="signup-link">
               Not a member? <a href="register">Signup now</a>
             </div>
-          </form>
-
-          
-
-          
-          <!-- <form action="register" class="signup" method="post">
-            {% csrf_token %}
-            <div class="field">
-              <input type="text" name="name1" placeholder="Name" required />
-            </div>
-            <div class="field">
-              <input
-                type="text"
-                name="email_ID"
-                placeholder="Email Address"
-                required
-              />
-            </div>
-            <div class="field">
-              <input
-                type="password"
-                name="password1"
-                placeholder="Password"
-                required
-              />
-            </div>
-            <div class="field">
-              <input
-                type="password"
-                name="password2"
-                placeholder="Confirm password"
-                required
-              />
-            </div>
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <input type="submit" value="Signup" />
-            </div>
-          </form> -->
-          
-          
-          
+          </form>  
         </div>
             <div>
             {% for message in messages %}
