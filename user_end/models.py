@@ -8,3 +8,4 @@ class query(models.Model):
     user_details = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     query_date= models.DateField()
     query_time=models.TimeField()
+    query_status=models.BooleanField(default=False)
