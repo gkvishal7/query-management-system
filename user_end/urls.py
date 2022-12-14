@@ -2,5 +2,5 @@
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('', views.user_view, name='index'),
+    path('querysubmit/', views.user_view, name='querysubmit'),
 ]
