@@ -5,6 +5,7 @@ from django.utils import timezone
 import datetime
 from django.contrib.auth.base_user import BaseUserManager  
  
+#Custom Model Manager 
 class userManager(BaseUserManager):   
     def create_user(self,username, email, password, **extra_fields):  
         if not email:  
@@ -25,7 +26,7 @@ class userManager(BaseUserManager):
             raise ValueError(_('Superuser must have is_superuser=True.'))  
         return self.create_user(username,email, password, **extra_fields)  
       
-
+#Custom User Model
 class user(AbstractBaseUser, PermissionsMixin):  
     username = models.CharField(max_length=45)
     email = models.EmailField(('email_address'), unique=True, max_length = 200)  
