@@ -9,17 +9,20 @@ def home(request):
 #Login Method
 def login(request):
     if(request.method=="POST"):
-        email=request.POST['emailid']
-        passwd=request.POST['password']
-        user=auth.authenticate(request,email=email,password=passwd)
-        if(user is not None):
-            auth.login(request,user)
-            print("Success")
-            return redirect("/querysubmit/")
+        if request.user.is_superuser:
+            print("hello")
         else:
-            print("Failed")
-            messages.error(request,"Invalid Credentials")
-            return redirect("login")
+            email=request.POST['emailid']
+            passwd=request.POST['password']
+            user=auth.authenticate(request,email=email,password=passwd)
+            if(user is not None):
+                auth.login(request,user)
+                print("Success")
+                return redirect("/querysubmit/")
+            else:
+                print("Failed")
+                messages.error(request,"Invalid Credentials")
+                return redirect("login")
     else:
         return render(request,'accounts/login.html')
 

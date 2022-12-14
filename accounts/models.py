@@ -20,28 +20,21 @@ class userManager(BaseUserManager):
         extra_fields.setdefault('is_staff', True)  
         extra_fields.setdefault('is_superuser', True)  
         extra_fields.setdefault('is_active', True)  
-        if extra_fields.get('is_staff') is not True:  
-            raise ValueError(_('Superuser must have is_staff=True.'))  
-        if extra_fields.get('is_superuser') is not True:  
-            raise ValueError(_('Superuser must have is_superuser=True.'))  
-        return self.create_user(username,email, password, **extra_fields)  
+        return self.create_user(email,username,password,**extra_fields)
+
       
 #Custom User Model
-class user(AbstractBaseUser, PermissionsMixin):  
+class user(AbstractBaseUser, PermissionsMixin,):  
     username = models.CharField(max_length=45)
-    email = models.EmailField(('email_address'), unique=True, max_length = 200)  
+    email = models.EmailField(unique=True, max_length = 200)  
     date_joined = models.DateTimeField(default=timezone.now)  
     is_staff = models.BooleanField(default=False)  
     is_active = models.BooleanField(default=True)  
+    objects = userManager() 
     USERNAME_FIELD = 'email'  
-    REQUIRED_FIELDS = [email,username]  
-    objects = userManager()  
+    REQUIRED_FIELDS = ['username']  
     def has_perm(self, perm, obj=None):  
         return True   
-    def is_staff(self):    
-        return self.staff  
-    @property  
-    def is_admin(self):    
-        return self.admin  
     def __str__(self):  
         return self.email
+     
