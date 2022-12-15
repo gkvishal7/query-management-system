@@ -5,7 +5,7 @@ html, body {
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
     color: #666;
-    background-color: black;
+    /* background-color: black; */
     }
     h1 {
     margin: 0 0 20px;
@@ -21,7 +21,7 @@ html, body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: #1c87c9; */
+    background: #1c87c9;
     }
     form {
     padding: 25px;
@@ -45,7 +45,7 @@ html, body {
     width: calc(100% - 18px);
     padding: 8px;
     margin-bottom: 20px;
-    /* border: 1px solid #1c87c9; */
+    border: 1px solid #1c87c9;
     outline: none;
     border-radius: 7px;
     }
@@ -98,3 +98,4 @@ html, body {
       border:1px solid black;
     
     }
+
