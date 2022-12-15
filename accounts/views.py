@@ -11,7 +11,7 @@ def home(request):
 def login(request):
     if(request.method=="POST"):
         if request.user.is_superuser:
-            print("hello")
+            return redirect("/admin_end/")
         else:
             email=request.POST['emailid']
             passwd=request.POST['password']
