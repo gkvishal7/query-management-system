@@ -1,13 +1,27 @@
 body {
     font-family: 'lato', sans-serif;
-    /* background-color: black; */
+    background-color: #fff;
+    margin: 0;
+}
+.col{
+    color: black;
 }
 .container {
-    max-width: 100%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgba(200, 212, 221, 0.512);
+    /* background-color: #fff; */
+    border-radius: 20px;
+    /* background: -webkit-linear-gradient(to right, #B1AFFF, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #B1AFFF); */
+}
+.table-row{
+    background: rgba(200, 212, 221, 0.512);
 }
 h2 {
     font-size: 26px;
@@ -25,7 +39,9 @@ h2 small {
     margin-bottom: 25px;
 }
 .responsive-table .table-header {
-    background-color: #95a5a6;
+    /* background-color: #95a5a6; */
+    background: -webkit-linear-gradient(to right, #0AA1DD, #0AA1DD);
+	background: linear-gradient(to right, #1363DF, #0AA1DD);
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -83,9 +99,9 @@ h2 small {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
+    /* grid-gap: 10px; */
     
-    padding: 10px;
+    /* padding: 10px; */
   }
 
 
@@ -129,9 +145,7 @@ h2 small {
 
 
 
-.navbar-container{
-    margin: 0;
-}
+
 
 .hoverable{
     display:inline-block;
@@ -251,18 +265,28 @@ h2 small {
     color: white;
 }
 .container-fluid{
-    /* padding-top: 3%; */
-    /* height: 2em; */
+    
+    
     border: 2px black solid;
     height: 100px;
-    background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+    /* background-color: #1363DF; */
+	background: -webkit-linear-gradient(to right, #0AA1DD, #0AA1DD);
+	background: linear-gradient(to right, #1363DF, #0AA1DD);
 }
 .list-style{
     display: inline;
     justify-content: right;
     
+}
+
+.nav-btn{
+    background-color: #B5DEFF;
+    padding: 1rem;
+    border-radius: 10px;
+    padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .navbar{
