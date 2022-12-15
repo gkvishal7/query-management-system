@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'admin_end',
      'user_end',
-    'accounts',
+     'accounts',
 ]
+AUTH_USER_MODEL = 'accounts.user'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,25 +77,25 @@ WSGI_APPLICATION = 'query_management_system.wsgi.application'
 
 # Database
 #https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'query-management-system',
-#         'USER':'vishwa',
-#         'PASSWORD':'1234',
-#         'HOST':'localhost'
-#     }
-# }
-
-DATABASES={
-    'default':{
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'query-management-system',
-        'USER':'postgres',
-        'PASSWORD':'001',
+        'USER':'vishwa',
+        'PASSWORD':'1234',
         'HOST':'localhost'
     }
 }
+
+# DATABASES={
+#     'default':{
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'query-management-system',
+#         'USER':'postgres',
+#         'PASSWORD':'001',
+#         'HOST':'localhost'
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -107,7 +108,6 @@ DATABASES={
 # }
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
-AUTH_USER_MODEL = 'accounts.user'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
