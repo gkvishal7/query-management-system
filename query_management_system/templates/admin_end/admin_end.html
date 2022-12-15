@@ -1,5 +1,5 @@
 {% load static %}
-{% load update_val %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,16 +41,19 @@
             
           </li>
           {%for i in query_list %}
+          
           <form method="post" action="/admin_end/">
             {% csrf_token %}
           <li class="table-row grid-container">
-            <div class="col col-1" data-label="s.no">{{ forloop.counter }} </div>
+            <div class="col col-1" data-label="s.no" >{{ forloop.counter }} </div>
             <div class="col col-2" data-label="username">{{i.user_details_id}}</div>
             <div class="col col-3" data-label="query_title">{{i.query_title}}</div>
             <div class="col col-4">{{i.query_date}} {{i.query_time}}</div>
-            <div class="col col-6 btns">
-              <button class="approve btn col col-5" type="submit">Approve</button>
+            <div class="col col-6 btns">              
+            <input type="hidden" name="queryid" value="{{ i.id }}" />  
+            <button class="approve btn col col-5" type="submit">Approve</button>
             </div>
+           
           </li>
           </form>
           {% endfor %}
