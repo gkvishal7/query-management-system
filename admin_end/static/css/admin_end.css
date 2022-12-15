@@ -269,7 +269,7 @@ h2 small {
   display: flex;
   justify-content: right;
   margin-top: 1%;
-  border: 2px red solid;
+  /* border: 2px red solid; */
 }
 
 
