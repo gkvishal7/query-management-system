@@ -5,6 +5,7 @@ html, body {
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
     color: #666;
+    background-color: black;
     }
     h1 {
     margin: 0 0 20px;
@@ -20,7 +21,7 @@ html, body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1c87c9;
+    /* background: #1c87c9; */
     }
     form {
     padding: 25px;
@@ -96,4 +97,8 @@ html, body {
       padding:1em 2em .8em 2em;
       border:1px solid black;
     
+    }
+
+    .form-container{
+      /* background-color: #666; */
     }
