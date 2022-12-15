@@ -9,28 +9,89 @@
     <title>Admin Page</title>
 </head>
 <body>
+
+    <div class="navbar-container">
+      <div class="container-fluid">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid1">
+            <ul class="nav navbar-nav list-style">
+              <li class="list-style"><a id="len1" class="hoverable link" href="#">Home</a></li>
+              <li class="list-style"><a id="len2" class="hoverable link" href="login">Logout</a></li>
+              <!-- <li class="list-style"><a id="len3" class="hoverable link" href="register">Register</a></li>
+              <li class="list-style"><a id="len4" class="hoverable link" href="#">About Us</a></li> -->
+            </ul>
+          </div>
+        </nav>
+        
+      </div>
+    </div>
+
+    
+
     <div class="container">
         <h2>Query list</h2>
         <ul class="responsive-table">
-          <li class="table-header">
-            <div class="col col-1">name</div>
-            <div class="col col-2">Email</div>
-            <div class="col col-3">Phone No</div>
-            <div class="col col-4">Query</div>
+          <li class="table-header grid-container">
+            <div class="col col-1">S.NO</div>
+            <div class="col col-2">Query</div>
+            <div class="col col-3">UserName</div>
+            <div class="col col-4">Date</div>
+            <div class="col col-5">Status</div>
+            <div class="col col-6">What to DO</div>
+            
           </li>
-          <li class="table-row">
-            <div class="col col-1" data-label="Job Id">aaa</div>
-            <div class="col col-2" data-label="Customer Name">John Doe</div>
-            <div class="col col-3" data-label="Amount">$350</div>
-            <div class="col col-4" data-label="Payment Status">Pending</div>
+          <li class="table-row grid-container">
+            <div class="col col-1" data-label="s.no">1.</div>
+            <div class="col col-2" data-label=" query">John Doe</div>
+            <div class="col col-3" data-label="username">Username</div>
+            <div class="col col-4">Date</div>
+            <div class="col col-5" data-label="status">Pending</div>
+            <div class="col col-6 btns">
+              <button class="approve btn col col-5">Approve</button>
+              <button class="approve btn col col-5">Reject</button>
+            </div>
+            
           </li>
-          <li class="table-row">
-            <div class="col col-1" data-label="Job Id">42442</div>
-            <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
-            <div class="col col-3" data-label="Amount">$220</div>
-            <div class="col col-4" data-label="Payment Status">Pending</div>
+          <li class="table-row grid-container">
+            <div class="col col-1" data-label="s.no">1.</div>
+            <div class="col col-2" data-label=" query">John Doe</div>
+            <div class="col col-3" data-label="username">Username</div>
+            <div class="col col-4">Date</div>
+            <div class="col col-5" data-label="status">Pending</div>
+            <div class="col col-6 btns">
+              <button class="approve btn col col-5">Approve</button>
+              <button class="approve btn col col-5">Reject</button>
+            </div>
+            
           </li>
-          <li class="table-row">
+
+          <li class="table-row grid-container">
+            <div class="col col-1" data-label="s.no">1.</div>
+            <div class="col col-2" data-label=" query">John Doe</div>
+            <div class="col col-3" data-label="username">Username</div>
+            <div class="col col-4">Date</div>
+            <div class="col col-5" data-label="status">Pending</div>
+            <div class="col col-6 btns">
+              <button class="approve btn col col-5">Approve</button>
+              <button class="approve btn col col-5">Reject</button>
+            </div>
+            
+          </li>
+          <li class="table-row grid-container">
+            <div class="col col-1" data-label="s.no">1.</div>
+            <div class="col col-2" data-label=" query">John Doe</div>
+            <div class="col col-3" data-label="username">Username</div>
+            <div class="col col-4">Date</div>
+            <div class="col col-5" data-label="status">Pending</div>
+            <div class="col col-6 btns">
+              <button class="approve btn col col-5">Approve</button>
+              <button class="approve btn col col-5">Reject</button>
+            </div>
+            
+          </li>
+          
+          
+          <!-- <li class="table-row">
             <div class="col col-1" data-label="Job Id">42257</div>
             <div class="col col-2" data-label="Customer Name">John Smith</div>
             <div class="col col-3" data-label="Amount">$341</div>
@@ -41,7 +102,7 @@
             <div class="col col-2" data-label="Customer Name">John Carpenter</div>
             <div class="col col-3" data-label="Amount">$115</div>
             <div class="col col-4" data-label="Payment Status">Pending</div>
-          </li>
+          </li> -->
         </ul>
       </div>
 </body>

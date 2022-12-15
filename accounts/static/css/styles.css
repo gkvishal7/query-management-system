@@ -121,7 +121,9 @@
     /* height: 2em; */
     border: 2px black solid;
     height: 100px;
-    background-color:#1c87c9 ;
+    background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
 }
 .list-style{
     display: inline;
