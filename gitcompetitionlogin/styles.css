@@ -15,7 +15,7 @@ body {
 	height: 100vh;
 	margin: -20px 0 50px;
 }
-
+html, body {margin: 0; height: 100%; overflow: hidden}
 h1 {
 	font-weight: bold;
 	margin: 0;
