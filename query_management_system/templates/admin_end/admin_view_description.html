@@ -24,23 +24,22 @@
           
         </div>
     </div>
-
+    {%for i in query_list %}
     <div class="container">
         <div class="box-container">
-            <div class="query">
-                <div class="query-title">Query Title</div>
-                
+            <div class="query">    
+                <div class="query-title">{{i.query_title}}</div>  
             </div>
             <div class="query-desc">
-                <div class="query-description">Query Description </div>
+                <div class="query-description">{{i.query_description}}</div>
             </div>
 
             <div class="buttons">
-                <button class="">Back</button>
+                <a href="/admin_end/"><button>Back</button></a>
             </div>
 
         </div>
     </div>
-    
+    {%endfor%}
 </body>
 </html>
