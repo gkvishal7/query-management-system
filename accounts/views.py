@@ -13,8 +13,10 @@ def login(request):
         email=request.POST['emailid']
         passwd=request.POST['password']
         user=auth.authenticate(request,email=email,password=passwd)
+        print(user.is_superuser)
         if(user is not None):
             if user.is_superuser:
+                auth.login(request,user)
                 return redirect("/admin_end/")
             else: 
                     auth.login(request,user)
