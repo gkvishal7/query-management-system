@@ -11,7 +11,7 @@ import pytz
 from datetime import datetime
 
 #Only Logged in User can access the view
-@login_required(login_url='/login/')
+@login_required(login_url='/')
 def user_view(request):
     if request.method=="POST":
         #Getting data from POST request
