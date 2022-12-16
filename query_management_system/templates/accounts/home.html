@@ -26,13 +26,19 @@
 			
 			<div>
 				{% for message in messages %}
-		
-				<div class="alert alert-danger error-message" style="color: red;">
-				  <a class="close" href="/" data-dismiss="alert">×</a>
-				  {{ message }}
-				</div>
-		
-				{% endfor %}
+	{%if message.tags == 'error' %}	
+    <div class="alert alert-danger error-message" style="color: red;">
+      <a class="close" href="/" data-dismiss="alert">×</a>
+      {{ message }}
+    </div>
+    {%else%}
+    <div class="alert alert-danger error-message" style="color: rgb(6, 235, 33); padding-top: 40px;">
+        <a class="close" href="/" data-dismiss="alert">×</a>
+        {{ message }}
+    </div>  
+    {%endif%}
+    {% endfor %}
+
 			  </div>
 		</form>
 	</div>
@@ -47,13 +53,19 @@
 			<button type="submit">LOG IN</button>
 			<div>
 				{% for message in messages %}
-		
+				{%if message.tags == 'error' %}	
 				<div class="alert alert-danger error-message" style="color: red;">
 				  <a class="close" href="/" data-dismiss="alert">×</a>
 				  {{ message }}
 				</div>
-		
+				{%else%}
+				<div class="alert alert-danger error-message" style="color: rgb(6, 235, 33);">
+					<a class="close" href="/" data-dismiss="alert">×</a>
+					{{ message }}
+				</div>  
+				{%endif%}
 				{% endfor %}
+			
 			  </div>
 		</form>
 	</div>
