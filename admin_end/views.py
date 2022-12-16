@@ -17,10 +17,11 @@ def admin(request):
         querytochange=query.objects.get(id=queryid)
         querytochange.query_status=True
         user_id=querytochange.user_details_id
-        querytochange.save()
+        #querytochange.save()
         emailname=user.getusername(user.objects.get(id=user_id)).capitalize()
         emailid=user.objects.get(id=user_id)
-        emailtext="Dear "+emailname+","+"\nThis is to confirm that we have seen your query. \nWe assure you that the query will be resolved ASAP. \nRegards  "
+        emailquerydate=querytochange.query_date.strftime('%d/%m/%Y')
+        emailtext="Dear "+emailname+","+"\nThis is to confirm that we have seen your query dated on "+emailquerydate+".\nWe assure you that the query will be resolved ASAP. \nRegards  "
         emailsubject="Acknowledgement for your query"
         send_mail(emailsubject, emailtext, 'querymanagementsystem@software', [emailid])
         query_list=list(query.objects.filter(query_status=False).values())
