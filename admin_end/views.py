@@ -17,7 +17,7 @@ def admin(request):
         querytochange=query.objects.get(id=queryid)
         querytochange.query_status=True
         user_id=querytochange.user_details_id
-        #querytochange.save()
+        querytochange.save()
         emailname=user.getusername(user.objects.get(id=user_id)).capitalize()
         emailid=user.objects.get(id=user_id)
         emailquerydate=querytochange.query_date.strftime('%d/%m/%Y')
