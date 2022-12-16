@@ -6,12 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="{% static 'imgs/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <title>Home</title>
 </head>
 <body>
-    <h2 style="color: #1C87C9; font-family: 'Times New Roman', Times, serif; font-weight: bold;">QUERY PORTAL</h2>
-<div class="container" id="container">
+	<div class="abcd" style="margin: 4%;">
+		<h2 style="color: #1C87C9; font-family: 'Times New Roman', Times, serif; font-weight: bold; margin: 20px;">QUERY PORTAL</h2>
+	
+		
+	</div>
+	<div class="container" id="container">
 	<div class="form-container sign-up-container">
 	
 		<form action="/register/" method="post">
@@ -45,7 +50,7 @@
 	<div class="form-container sign-in-container">
 		<form action="/login/" method="post" >
 			{%csrf_token%}
-			<h1>Sign in</h1>
+			<h1 id="up">Sign in</h1>
 			
 			<input type="email" placeholder="Email" name="emailid" required/>
 			<input type="password" placeholder="Password" name="password" required />
@@ -72,21 +77,24 @@
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
+				<h1 class="heading">Welcome Back!</h1>
 				<p>Login to Solve your Issue ASAP!</p>
-				<button class="ghost" id="signIn">Sign In</button>
+				<button class="ghost heading" id="signIn">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1>Solved Your Issue?</h1>
+				<h1 class="heading">Solved Your Issue?</h1>
 				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Sign Up</button>
+				<button class="ghost heading" id="signUp">Sign Up</button>
 			</div>
 		</div>
 	</div>
 </div>
 
 <footer class="footer-distributed">
-    <h3>Contact Us </h3>
+	<div class="footer-head">
+
+		<div class="footer-cont"><h4  class="head-4">Contact Us</h4></div>
+	</div>
         <div class="footer-container">
                     <div class="footer-content">
                         <a id="ft" href="https://github.com/karthickeyan03" class="centre">
@@ -101,8 +109,8 @@
                         </a>
                     </div>
                     <div class="footer-content">
-                        <a href="https://github.com/gkvishal7" target="_blank" class="centre"> <img src="{% static 'imgs/question.png' %}" alt="footer logo" class="centre"></a>
-                        <p>Vishal GK</p>
+                        <a href="https://github.com/gkvishal7" target="_blank" class="centre"> <img src="{% static 'imgs/question.png' %}" alt="footer logo" class="centre"><p>Vishal GK</p></a>
+                        
                     </div>
         </div>
     </div>

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'imgs/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_view_description.css' %}">
+    <title>Query Description</title>
+</head>
+<body>
+
+    <div class="navbar-container">
+        <div class="container-fluid">
+        <nav class="navbar navbar-inverse"> 
+            <div class="container-fluid1">
+              <ul class="nav navbar-nav list-style">
+                <li class="list-style"><a id="len2" class="hoverable link" href="/logout/">Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+          
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box-container">
+            <div class="query">
+                <div class="query-title">Query Title</div>
+                
+            </div>
+            <div class="query-desc">
+                <div class="query-description">Query Description </div>
+            </div>
+
+            <div class="buttons">
+                <button class="">Back</button>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
