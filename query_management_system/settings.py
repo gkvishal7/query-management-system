@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-39r!k2)56@ji-+!wz*m-c*c9h_1z+kn5t=%+gz!yt4ltj30xp3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = []
 
@@ -79,15 +79,16 @@ WSGI_APPLICATION = 'query_management_system.wsgi.application'
 # Database
 #https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER':'pghpqzqugp@querymanagementsystem-server.postgres.database.azure.com',
-        'PASSWORD':'e^z3a^ofxf&k4zfa^c^rx',
-        'HOST':'server.postgres.database.azure.com'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER':'pghpqzqugp@querymanagementsystem-server.postgres.database.azure.com',
+#         'PASSWORD':'e^z3a^ofxf&k4zfa^c^rx',
+#         'HOST':'server.postgres.database.azure.com'
+#     }
+# }
+
 
 # DATABASES = {
 #     'default': {
@@ -109,15 +110,15 @@ DATABASES = {
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'yrqicjje',
-#         'USER':'yrqicjje',
-#         'PASSWORD':'2H56PHHibpnBUaDmH9l0bL1ltc7uDWiq',
-#         'HOST':'rosie.db.elephantsql.com'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'yrqicjje',
+        'USER':'yrqicjje',
+        'PASSWORD':'2H56PHHibpnBUaDmH9l0bL1ltc7uDWiq',
+        'HOST':'rosie.db.elephantsql.com'
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
