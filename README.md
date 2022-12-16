@@ -84,5 +84,5 @@ If you have any feedback, please reach out to us at
 
 ## Screenshots
 
-![App Screenshot](/img/1/jpeg)
+![App Screenshot](/img/1.jpeg)
 
