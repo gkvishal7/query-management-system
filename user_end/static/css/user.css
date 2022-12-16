@@ -1,102 +1,127 @@
 html, body {
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 14px;
-    color: #666;
-    /* background-color: black; */
-    }
-    h1 {
-    margin: 0 0 20px;
-    font-weight: 400;
-    color: #1c87c9;
-    }
-    p {
-    margin: 0 0 5px;
-    }
-    .main-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #1c87c9;
-    }
-    
-    form {
-    padding: 25px;
-    margin: 25px;
-    box-shadow: 0 2px 5px #f5f5f5; 
-    background: #f5f5f5; 
-    border-radius: 8px;
-    }
-    .fas {
-    margin: 25px 10px 0;
-    font-size: 72px;
-    color: #fff;
-    }
-    .fa-envelope {
-    transform: rotate(-20deg);
-    }
-    .fa-at , .fa-mail-bulk{
-    transform: rotate(10deg);
-    }
-    input, textarea {
-    width: calc(100% - 18px);
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #1c87c9;
-    outline: none;
-    border-radius: 7px;
-    }
-    input::placeholder {
-    color: #666;
-    }
-    button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: #1c87c9; 
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    border-radius: 5px;
-    }
-    button:hover {
-    background: #2371a0;
-    } 
-    @media (min-width: 568px) {
-    .main-block {
-    flex-direction: row;
-    }
-    .left-part, form {
-    width: 50%;
-    }
-    .fa-envelope {
-    margin-top: 0;
-    margin-left: 20%;
-    }
-    .fa-at {
-    margin-top: -10%;
-    margin-left: 65%;
-    }
-    .fa-mail-bulk {
-    margin-top: 2%;
-    margin-left: 28%;
-    }
-    }
-    ul{
-      list-style:none;
-      display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      justify-content:center;
-      width:25vw;
-    
-    }
-    ul li{
-      padding:1em 2em .8em 2em;
-      border:1px solid black;
-    
-    }
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  /* background-color: black; */
+  }
+  h1 {
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: #1c87c9;
+  }
+  p {
+  margin: 0 0 5px;
+  }
+  .main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1c87c9;
+  }
+  
+  form {
+  padding: 25px;
+  margin: 25px;
+  box-shadow: 0 2px 5px #f5f5f5; 
+  background: #f5f5f5; 
+  border-radius: 8px;
+  }
+  .fas {
+  margin: 25px 10px 0;
+  font-size: 72px;
+  color: #fff;
+  }
+  .fa-envelope {
+  transform: rotate(-20deg);
+  }
+  .fa-at , .fa-mail-bulk{
+  transform: rotate(10deg);
+  }
+  input, textarea {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #1c87c9;
+  outline: none;
+  border-radius: 7px;
+  }
+  input::placeholder {
+  color: #666;
+  }
+  button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #1c87c9; 
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 5px;
+  }
+  button:hover {
+  background: #2371a0;
+  } 
+  @media (min-width: 568px) {
+  .main-block {
+  flex-direction: row;
+  }
+  .left-part, form {
+  width: 50%;
+  }
+  .fa-envelope {
+  margin-top: 0;
+  margin-left: 20%;
+  }
+  .fa-at {
+  margin-top: -10%;
+  margin-left: 65%;
+  }
+  .fa-mail-bulk {
+  margin-top: 2%;
+  margin-left: 28%;
+  }
+  }
+  ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    justify-content:center;
+    width:25vw;
+  
+  }
+  ul li{
+    padding:1em 2em .8em 2em;
+    border:1px solid black;
+  
+  }
 
+
+  .navbar-container{
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .navbar{
+      text-align: center !important;
+      float: none;
+      display: inline-block;
+      
+    }
+  }
+  nav {
+    background: none !important;
+    text-transform:uppercase;
+  }
+  
+.navbar{
+display: flex;
+justify-content: center;
+padding-top: 2.5%;
+
+/* border: 2px red solid; */
+}        
