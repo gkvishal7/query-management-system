@@ -85,4 +85,10 @@ If you have any feedback, please reach out to us at
 ## Screenshots
 
 ![App Screenshot](/img/1.jpeg)
-
+![App Screenshot](/img/2_user.jpeg)
+![App Screenshot](/img/3_user.jpeg)
+![App Screenshot](/img/4_user.jpeg)
+![App Screenshot](/img/5_Admin.jpeg)
+![App Screenshot](/img/6_admin.jpeg)
+![App Screenshot](/img/7_admin.jpeg)
+![App Screenshot](/img/8_email.jpeg)
