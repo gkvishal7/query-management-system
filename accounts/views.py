@@ -13,6 +13,7 @@ def login(request):
         email=request.POST['emailid']
         passwd=request.POST['password']
         user=auth.authenticate(request,email=email,password=passwd)
+        print(user)
         print(user.is_superuser)
         if(user is not None):
             if user.is_superuser:
@@ -36,7 +37,6 @@ def register(request):
         email=request.POST['emailid']
         passwd=request.POST['password1']
         confirm_passwd=request.POST['password2']
-
         if(passwd==confirm_passwd):
             if user.objects.filter(username=name).exists():
                 messages.error(request,"Username already Exists")
