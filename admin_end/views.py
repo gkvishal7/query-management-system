@@ -22,3 +22,9 @@ def admin(request):
 def logout_admin(request):
     logout(request)
     return redirect("/")
+def history(request):
+    query_list=list(query.objects.all().values())
+    for i in query_list:
+            i['user_details_id']=user.getusername(user.objects.get(id=i.get("user_details_id"))).capitalize()
+    return render(request,"admin_end/admin_end_history.html",{'query_list':query_list})
+    
