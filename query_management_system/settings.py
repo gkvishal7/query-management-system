@@ -79,15 +79,15 @@ WSGI_APPLICATION = 'query_management_system.wsgi.application'
 # Database
 #https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER':'pghpqzqugp@querymanagementsystem-server.postgres.database.azure.com',
-        'PASSWORD':'e^z3a^ofxf&k4zfa^c^rx',
-        'HOST':'server.postgres.database.azure.com'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER':'pghpqzqugp@querymanagementsystem-server.postgres.database.azure.com',
+#         'PASSWORD':'e^z3a^ofxf&k4zfa^c^rx',
+#         'HOST':'server.postgres.database.azure.com'
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -99,15 +99,15 @@ DATABASES = {
 #     }
 # }
 
-# DATABASES={
-#     'default':{
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'query-management-system',
-#         'USER':'postgres',
-#         'PASSWORD':'001',
-#         'HOST':'localhost'
-#     }
-# }
+DATABASES={
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'query-management-system',
+        'USER':'postgres',
+        'PASSWORD':'001',
+        'HOST':'localhost'
+    }
+}
 
 # DATABASES = {
 #     'default': {
