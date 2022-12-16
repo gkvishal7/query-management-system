@@ -1,10 +1,10 @@
+import smtplib
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from user_end.models import query
 from django.contrib.auth import logout
 from accounts.models import user
 from django.core.mail import send_mail
-
 @login_required(login_url='/login/')
 def admin(request):
     if request.method=="GET":
@@ -30,7 +30,9 @@ def admin(request):
                 i['user_details_id']=user.getusername(user.objects.get(id=i.get("user_details_id"))).capitalize()
             return render(request,"admin_end/admin_end.html",{'query_list':query_list})
         elif 'viewquery' in request.POST:
-            return render(request,"admin_end/admin_view_description.html")
+            queryid=int((request.POST['queryid']))
+            querydata=list(query.objects.filter(id=queryid).values())
+            return render(request,"admin_end/admin_view_description.html",{'query_list':querydata})
 def logout_admin(request):
     logout(request)
     return redirect("/")
