@@ -23,31 +23,32 @@ def login(request):
         else:
             print("Failed")
             messages.error(request,"Invalid Credentials")
-            return redirect("login")   
+            return redirect("/")   
     else:
-        return render(request,'accounts/login.html')
+        return redirect("/")
 
 #Register Method
 def register(request):
     if(request.method=="POST"):
-        name=request.POST['name1']
-        email=request.POST['email_ID']
+        name=request.POST['username']
+        email=request.POST['emailid']
         passwd=request.POST['password1']
         confirm_passwd=request.POST['password2']
 
         if(passwd==confirm_passwd):
             if user.objects.filter(username=name).exists():
                 messages.error(request,"Username already Exists")
-                return redirect("register")
+                return redirect("/")
             elif user.objects.filter(email=email).exists():
                 messages.error(request,"Already Registered with this mail ID")
-                return redirect("register")
+                return redirect("/")
             else :
                  userobj=user.objects.create_user(username=name,email=email,password=passwd)
                  userobj.save()
-                 return redirect("/login")
+                 messages.success(request,"Successfully Created")
+                 return redirect("/")
         else:
             messages.error(request,"Password Not Matching")
-            return redirect("register")
+            return redirect("/")
     else:
-        return render(request,'accounts/register.html')
+        return redirect("/")
