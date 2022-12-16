@@ -36,28 +36,38 @@
   <div class="main-block">
     
 
-    
-    <form action="/querysubmit/" id="formsubmission" method="post">
-      {% csrf_token %}
+    <div class="form-container">
 
-      <h1>Query form</h1>
-      <div class="info">
+      <form action="/querysubmit/" id="formsubmission" method="post">
+        {% csrf_token %}
+  
+        <h1>Query form</h1>
+        <div class="info">
+  
+          <div class="attr-container">
+            <label for="Date">Date:</label>
+          </div>
+          <input type="text" id="datepicker" name="date" placeholder="Date">
+          <!--<input type="text" name="name" id="email" placeholder="Email">
+              <input type="text" name="name" id="phoneno" placeholder="Phone number"> -->
+          <!--<input type="text" name="name" placeholder="Website"> -->
+          <div class="attr-container">
+            <label for="Query Title">Query Title:</label>
+          </div>
+          <textarea rows="1" name="query_title" required placeholder="Query"></textarea>
+        </div>
+        <div class="attr-container">
+          <label for="Description">Description:</label>
+        </div>
+        
+  
+        <div>
+          <textarea name="query_description" rows="4" required placeholder="Description"></textarea>
+        </div>
+        <button type="submit" >Submit</button>
+      </form>
+    </div>
 
-        <label for="Date">Date:</label>
-        <input type="text" id="datepicker" name="date" placeholder="Date">
-        <!--<input type="text" name="name" id="email" placeholder="Email">
-            <input type="text" name="name" id="phoneno" placeholder="Phone number"> -->
-        <!--<input type="text" name="name" placeholder="Website"> -->
-        <p>Query Outline</p>
-        <textarea rows="1" name="query_title" required placeholder="Query"></textarea>
-      </div>
-      <p>Description</p>
-
-      <div>
-        <textarea name="query_description" rows="4" required placeholder="Description"></textarea>
-      </div>
-      <button type="submit" >Submit</button>
-    </form>
   </div>
   <div id="result">
 </body>
