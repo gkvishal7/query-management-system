@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/admin_end.css' %}">
+    <title>Admin Page</title>
+</head>
+<body>
+
+  <div class="navbar-container">
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid1">
+          <ul class="nav navbar-nav list-style">
+            <li class="list-style"><a id="len1" class="hoverable link active-page" href="/querysubmit/">NEW QUERY</a></li>
+            <li class="list-style"><a id="len2" class="hoverable link" href="/logout/">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+    </div>
+</div>
+    <div class="container">
+      <div class="table-container">
+        <ul class="responsive-table">
+          <li class="table-header grid-container">
+            <div class="col col-1">S.NO</div>
+            <div class="col col-2">Query</div>
+            <div class="col col-3">Date & Time</div>
+            <div class="col col-4">Staus</div>    
+          </li>
+          {%for i in query_list %}
+          <form method="post" action="/admin_end/">
+            {% csrf_token %}
+          <li class="table-row grid-container">
+            <div class="col col-1" data-label="s.no" >{{ forloop.counter }} </div>
+            <div class="col col-2" data-label="query_title">{{i.query_description}}</div>
+            <div class="col col-3">{{i.query_date}} {{i.query_time}}</div>
+            {%if i.query_status %}
+            <div class="col col-4" style="color: #77c331; font-weight: 600;">VIEWED AND ACKNOWLEDGED</div>
+            {% else  %}
+            <div class="col col-4" style="color:#FF797A; font-weight: 600;">PENDING</div>
+            {%endif%}
+          </li>
+          </form>
+          {% endfor %}
+          
+        </ul>
+      </div>
+      </div>
+</body>
+</html>
