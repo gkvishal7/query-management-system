@@ -65,6 +65,7 @@ For reference - https://docs.djangoproject.com/en/4.1/howto/deployment/
 
 - Bootstrap : https://getbootstrap.com/docs/5.2/getting-started/introduction/
 - Django : https://docs.djangoproject.com/en/4.1/
+- PostgreSql : https://www.postgresql.org/docs/current/index.html
 
 
 ## Github Student Developer Tools
