@@ -49,11 +49,12 @@
             <div class="col col-4">{{i.query_date}} {{i.query_time}}</div>
             <div class="col col-6 btns">
               <div class="view-query" style="display: inline;">
-                <button class="approve  btn btn-query col col-5">View Query</button>
+                <input type="hidden" name="queryid" value={{i.id}}>
+                <button class="approve  btn btn-query col col-5" name="viewquery">View Query</button>
               </div>
               <div class="ack" style="display: inline;">
                 <input type="hidden" name="queryid" value={{i.id}}>
-                <button class="ack btn col col-5" type="submit">Acknowledgement</button>
+                <button class="ack btn col col-5" type="submit" name="acknowledgement">Acknowledgement</button>
               </div>
             </div>
            
