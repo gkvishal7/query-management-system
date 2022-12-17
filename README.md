@@ -55,7 +55,7 @@ To create a superuser
 
 To deploy this project, clone this repository and make changes in the settings.py file
 
-Our Deployment - https://querymanagementsystem.azurewebsites.net/ (Not yet Fully Depolyed)
+Our Deployment - https://querymanagementsystem.azurewebsites.net/
 
 For reference - https://docs.djangoproject.com/en/4.1/howto/deployment/ 
 
