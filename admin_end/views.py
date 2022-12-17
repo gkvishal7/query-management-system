@@ -24,7 +24,7 @@ def admin(request):
             emailquerydate=querytochange.query_date.strftime('%d/%m/%Y')
             emailtext="Dear "+emailname+","+"\nThis is to confirm that we have seen your query dated on "+emailquerydate+".\nWe assure you that the query will be resolved ASAP. \nRegards  "
             emailsubject="Acknowledgement for your query"
-            send_mail(emailsubject, emailtext, 'querymanagementsystem@software', [emailid])
+            #send_mail(emailsubject, emailtext, 'querymanagementsystem@software', [emailid])
             query_list=list(query.objects.filter(query_status=False).values())
             for i in query_list:
                 i['user_details_id']=user.getusername(user.objects.get(id=i.get("user_details_id"))).capitalize()
