@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,45 +77,16 @@ WSGI_APPLICATION = 'query_management_system.wsgi.application'
 # Database
 #https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER':'pghpqzqugp@querymanagementsystem-server.postgres.database.azure.com',
-#         'PASSWORD':'e^z3a^ofxf&k4zfa^c^rx',
-#         'HOST':'server.postgres.database.azure.com'
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'query-management-system',
-        'USER':'vishwa',
-        'PASSWORD':'1234',
+        'NAME': os.getenv("POSTGRES_DB"),
+        'USER':os.getenv("POSTGRES_USER"),
+        'PASSWORD':os.getenv("POSTGRES_PASSWORD"),
         'HOST':'localhost'
     }
 }
 
-# DATABASES={
-#     'default':{
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'query-management-system',
-#         'USER':'postgres',
-#         'PASSWORD':'001',
-#         'HOST':'localhost'
-#     }
-# }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yrqicjje',
-        'USER':'yrqicjje',
-        'PASSWORD':'2H56PHHibpnBUaDmH9l0bL1ltc7uDWiq',
-        'HOST':'rosie.db.elephantsql.com'
-    }
-}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
