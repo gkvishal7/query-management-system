@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import django
+from django.contrib.auth import get_user_model
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -27,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://querymanagementsystem.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://querymanagement.azurewebsites.net/']
 # Application definition
 
 INSTALLED_APPS = [
@@ -83,7 +85,7 @@ DATABASES = {
         'NAME': os.getenv("POSTGRES_DB"),
         'USER':os.getenv("POSTGRES_USER"),
         'PASSWORD':os.getenv("POSTGRES_PASSWORD"),
-        'HOST':'localhost'
+        'HOST':os.getenv("HOST")
     }
 }
 
@@ -139,3 +141,13 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
+
+
+#SUPER USER
+django.setup()
+
+User = get_user_model()
+if not User.objects.filter(username=os.getenv('ADMIN_USERNAME')).exists():
+    User.objects.create_superuser(os.getenv('ADMIN_USERNAME'), os.getenv('ADMIN_MAIL'), os.getenv('ADMIN_PASSWORD'))
+
+
