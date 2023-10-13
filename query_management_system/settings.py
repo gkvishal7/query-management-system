@@ -28,8 +28,11 @@ SECRET_KEY = 'django-insecure-39r!k2)56@ji-+!wz*m-c*c9h_1z+kn5t=%+gz!yt4ltj30xp3
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
-CSRF_TRUSTED_ORIGINS = ['https://querymanagement.azurewebsites.net/']
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = False
+CORS_ALLOW_ALL_ORIGINS = True
+CSRF_TRUSTED_ORIGINS = ['https://querymanagement.azurewebsites.net']
 # Application definition
 
 INSTALLED_APPS = [
