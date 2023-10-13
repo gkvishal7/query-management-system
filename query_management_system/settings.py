@@ -146,8 +146,8 @@ EMAIL_USE_TLS = True
 #SUPER USER
 django.setup()
 
-User = get_user_model()
-if not User.objects.filter(username=os.getenv('ADMIN_USERNAME')).exists():
-    User.objects.create_superuser(os.getenv('ADMIN_USERNAME'), os.getenv('ADMIN_MAIL'), os.getenv('ADMIN_PASSWORD'))
+# User = get_user_model()
+# if not User.objects.filter(username=os.getenv('ADMIN_USERNAME')).exists():
+#     User.objects.create_superuser(os.getenv('ADMIN_USERNAME'), os.getenv('ADMIN_MAIL'), os.getenv('ADMIN_PASSWORD'))
 
 
